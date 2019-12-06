@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 2.8)
+project(Pano2anyview)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_BUILD_TYPE "Debug")
+find_package( OpenCV REQUIRED )
+MESSAGE("OpenCV vesion: ${OpenCV_VERSION}")
+list(APPEND proj_LINKER_LIBS /usr/lib/x86_64-linux-gnu/libproj.so)
+AUX_SOURCE_DIRECTORY(. SRC_LIST) #把当前目录(.)下所有源代码文件和头文件加入变量SRC_LIST 
+add_executable(myPano2anyview ${SRC_LIST})
+target_link_libraries(myPano2anyview ${OpenCV_LIBS} )
+target_link_libraries(myPano2anyview ${proj_LINKER_LIBS})

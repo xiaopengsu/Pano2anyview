@@ -1,0 +1,14 @@
+run exampe:
+
+./cmake-build-debug/myPano2anyview ./data/image ../data/front_image ../data/top_image
+
+./cmake-build-debug/myPano2anyview /home/ubuntu/cmake_opencv_program/Pano_camera/Pano_camera_projection/pano_projection/Panoramic_cam_to_pixel/data/pano ../data/front_image ../data/top_image
+
+
+data Description:
+
+├── image //原始图像
+├── image.txt //原始图像列表
+├── front_image //转换后的前视图像
+└── top_image //转换后的俯视图图像
+
